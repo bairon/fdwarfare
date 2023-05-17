@@ -1,0 +1,139 @@
+{
+  "index": 2,
+  "attacking": [
+    {
+      "attacking": true,
+      "unit": "LANDS",
+      "quantity": 60393,
+      "attack": 165.0,
+      "armour": 23.0,
+      "hitpoints": 4000,
+      "attckRange": 1,
+      "perished": 10683,
+      "dmgDealt": 3300000
+    },
+    {
+      "attacking": true,
+      "unit": "KNIGHT",
+      "quantity": 3179,
+      "attack": 195.0,
+      "armour": 63.0,
+      "hitpoints": 4500,
+      "attckRange": 1,
+      "perished": 20,
+      "dmgDealt": 0
+    },
+    {
+      "attacking": true,
+      "unit": "HALBERD",
+      "quantity": 16008,
+      "attack": 140.0,
+      "armour": 48.0,
+      "hitpoints": 3500,
+      "attckRange": 2,
+      "perished": 49,
+      "dmgDealt": 1400000
+    },
+    {
+      "attacking": true,
+      "unit": "SPEARMAN",
+      "quantity": 7182,
+      "attack": 130.0,
+      "armour": 38.0,
+      "hitpoints": 1800,
+      "attckRange": 3,
+      "perished": 56,
+      "dmgDealt": 1040000
+    },
+    {
+      "attacking": true,
+      "unit": "CROSSBOWMAN",
+      "quantity": 4291,
+      "attack": 60.0,
+      "armour": 28.0,
+      "hitpoints": 2000,
+      "attckRange": 7,
+      "perished": 71,
+      "dmgDealt": 1440000
+    },
+    {
+      "attacking": true,
+      "unit": "BOWMAN",
+      "quantity": 11043,
+      "attack": 25.0,
+      "armour": 18.0,
+      "hitpoints": 1200,
+      "attckRange": 11,
+      "perished": 225,
+      "dmgDealt": 729375
+    }
+  ],
+  "defending": [
+    {
+      "attacking": false,
+      "unit": "KNIGHT",
+      "quantity": 3663,
+      "attack": 195.0,
+      "armour": 110.0,
+      "hitpoints": 4500,
+      "attckRange": 1,
+      "perished": 0,
+      "dmgDealt": 0
+    },
+    {
+      "attacking": false,
+      "unit": "SWORDSMAN",
+      "quantity": 26057,
+      "attack": 140.0,
+      "armour": 100.0,
+      "hitpoints": 2800,
+      "attckRange": 1,
+      "perished": 2778,
+      "dmgDealt": 5131280
+    },
+    {
+      "attacking": false,
+      "unit": "HALBERD",
+      "quantity": 16294,
+      "attack": 140.0,
+      "armour": 95.0,
+      "hitpoints": 3500,
+      "attckRange": 2,
+      "perished": 1,
+      "dmgDealt": 4225760
+    },
+    {
+      "attacking": false,
+      "unit": "SPEARMAN",
+      "quantity": 6874,
+      "attack": 130.0,
+      "armour": 85.0,
+      "hitpoints": 1800,
+      "attckRange": 3,
+      "perished": 8,
+      "dmgDealt": 4764760
+    },
+    {
+      "attacking": false,
+      "unit": "CROSSBOWMAN",
+      "quantity": 7294,
+      "attack": 68.0,
+      "armour": 75.0,
+      "hitpoints": 2000,
+      "attckRange": 7,
+      "perished": 34,
+      "dmgDealt": 3704402
+    },
+    {
+      "attacking": false,
+      "unit": "BOWMAN",
+      "quantity": 4855,
+      "attack": 33.0,
+      "armour": 65.0,
+      "hitpoints": 1200,
+      "attckRange": 16,
+      "perished": 43,
+      "dmgDealt": 4320794
+    }
+  ]
+}
