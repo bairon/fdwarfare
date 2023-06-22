@@ -25,27 +25,32 @@ class WarfareTest {
 
     private Player createAttacker() {
         return new Player(Collections.singletonList(createArmyAttackers()),
-                new Bonus(0, 0, 6, 8, 4),
-                new Bonus(0, 0, 13, 5, 0));
+                new Bonus(0, 0, 0, 0, 0),
+                new Bonus(0, 0, 10, 5, 0));
     }
     private Player createDefender() {
         return new Player(Collections.singletonList(createArmyDefenders()),
-                new Bonus(0, 0, 6, 8, 4),
-                new Bonus(0, 0, 13, 5, 0));
+                new Bonus(0, 0, 0, 0, 0),
+                new Bonus(0, 0, 10, 5, 0));
     }
 
     private Army createArmyAttackers() {   // атака
         HashMap<Troop, Integer> troops = new HashMap<>();
-        troops.put(Troop.KNIGHT, 80000); // кава
-        //troops.put(Troop.CROSSBOWMAN, 121000); // арба
-        //troops.put(Troop.BOWMAN, 4000); //луки
+        troops.put(Troop.CAVALRY, 7000); // арба
+        troops.put(Troop.HALBERD, 7000); // барды
+        troops.put(Troop.SPEARMAN, 7000); // копья
+        troops.put(Troop.CROSSBOWMAN, 7000); // арба
+        troops.put(Troop.BOWMAN, 7000); // луки
+
         return new Army(troops);
     }
     private Army createArmyDefenders() {  // защита
         HashMap<Troop, Integer> troops = new HashMap<>();
-        troops.put(Troop.KNIGHT, 50000); // кава
-        troops.put(Troop.CROSSBOWMAN, 4000); // кава
-        troops.put(Troop.BOWMAN, 4000); // кава
+        troops.put(Troop.CAVALRY, 7000); // арба
+        troops.put(Troop.HALBERD, 7000); // барды
+        troops.put(Troop.SPEARMAN, 7000); // копья
+        troops.put(Troop.CROSSBOWMAN, 7000); // арба
+        troops.put(Troop.BOWMAN, 7000); // луки
         return new Army(troops);
     }
 

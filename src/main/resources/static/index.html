@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html ng-app="fspApp" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sd="http://www.thymeleaf.org/spring-data">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="icon" type="image/png" href="/img/favicon.png">
+    <title>Калькулятор</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/fsp.css?version=2" />
+    <script src="/js/angular.min.js"></script>
+    <script src="/js/ui-bootstrap-tpls-2.2.0.min.js"></script>
+    <script src="/js/fsp.js?version=2"></script>
+</head>
+<body>
+<div ng-controller="fspController">
+    <h2 class="page-title"><a ng-click="update()">{{screens}}</a></h2>
+    <ul uib-pagination boundary-links="true"
+        items-per-page="limit"
+        total-items="totalItems"
+        ng-model="currentPage"
+        ng-change="pageChanged()"
+        class="pagination-sm"
+        previous-text="&lsaquo;"
+        next-text="&rsaquo;"
+        first-text="&laquo;"
+        last-text="&raquo;">
+    </ul>
+    <table class="table">
+        <tr ng-repeat="entry in entries">
+            <td>
+                <a target-blank="" href="http://prnt.sc/{{entry.prntscr}}">{{entry.prntscr}}</a><br />
+                {{entry.time}}
+            </td>
+            <td>
+                <div class="img-wrap">
+                    <span class="close" ng-click="deleteImage(entry.id)">&times;</span>
+                    <img src="{{entry.url}}">
+                </div>
+            </td>
+        </tr>
+    </table>
+    <ul uib-pagination boundary-links="true"
+        items-per-page="limit"
+        total-items="totalItems"
+        ng-model="currentPage"
+        ng-change="pageChanged()"
+        class="pagination-sm"
+        previous-text="&lsaquo;"
+        next-text="&rsaquo;"
+        first-text="&laquo;"
+        last-text="&raquo;">
+    </ul>
+    <h5>Отставание: {{gap}} минут.</h5>
+    <h5><a ng-click="overtake()">Пропустить</a></h5>
+
+</div>
+
+</body>
+</html>

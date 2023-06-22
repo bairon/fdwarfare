@@ -2,6 +2,8 @@ package wof.warfare;
 
 import wof.warfare.abilities.*;
 
+import java.util.stream.Stream;
+
 public class AttackUtil {
     public static final int DMG_UNIT_LIMIT = 4000;
     public static final int ARMOUR_LIMIT = 75;
@@ -11,7 +13,7 @@ public class AttackUtil {
         double formationDamage = calculateFormationDamage(source, target, unitAttack, dungeon);
         double targetArmour = Math.min(ARMOUR_LIMIT, calculateTargetArmour(source, target));
         long damageDealt = calculateDamageDealt(source, target, formationDamage, targetArmour);
-        //System.out.println("ATTACK: " + damageDealt + " " + source + " to " + target);
+        System.out.println("ATTACK: " + damageDealt + " " + source + " to " + target);
         if (source.unit == Troop.BOWMAN && randomTarget != null) {
             for (Ability ability : source.unit.abilities) {
                 if (ability instanceof ZalpAbility) {
@@ -19,7 +21,7 @@ public class AttackUtil {
                     double randomTargetDamage = formationDamage * dmgPart;
                     double randomTargetArmour = calculateTargetArmour(source, randomTarget);
                     long randomDamageDealt = calculateDamageDealt(source, randomTarget, randomTargetDamage, randomTargetArmour);
-                    //System.out.println("ATTACK: " + randomDamageDealt + " " + source + " to " + randomTarget);
+                    System.out.println("ATTACK: " + randomDamageDealt + " " + source + " to " + randomTarget);
                 }
             }
         }

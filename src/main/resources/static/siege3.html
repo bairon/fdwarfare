@@ -1,0 +1,1311 @@
+<body class="size-1" style="cursor: url(&quot;https://st.feodal.feogames.ru/resource/cursor.cur&quot;), default;">
+<header id="head-line" style="display: block;">
+    <div class="background">
+        <div class="main-background"></div>
+        <div class="underline-background"></div>
+    </div>
+    <div class="content">
+        <div class="logo"><a href="https://www.feogames.ru/"></a></div>
+        <div class="menu">
+            <div class="menu-item"><a href="https://www.feogames.ru/news.php" target="_blank">НОВОСТИ</a></div>
+            <div class="menu-delimiter"></div>
+            <div class="menu-item"><a href="https://www.feogames.ru/inventory.php" target="_blank">ИНВЕНТАРЬ</a></div>
+        </div>
+        <div class="profile login">
+            <div class="profile-login">
+                <div class="bank"></div>
+                <div class="currency">
+                    <div class="main">
+                        <div class="image"></div>
+                        <div class="value">183</div>
+                    </div>
+                    <div class="alt">
+                        <div class="image"></div>
+                        <div class="value">0</div>
+                    </div>
+                </div>
+                <div class="submenu-button">
+                    <div class="submenu">
+                        <div class="exp hidden">
+                            <div class="exp-line">
+                                <div class="exp-line-fill" style="width:25%"></div>
+                            </div>
+                            <div class="exp-counter"><span class="exp-now"></span> / <span class="exp-max"></span> XP
+                            </div>
+                        </div>
+                        <div class="submenu-delimiter hidden"></div>
+                        <div class="currency">
+                            <div class="currency-img"></div>
+                            <div class="currency-value"><span class="currency-gd">183</span> GD / <span
+                                    class="currency-rub">183</span> р.
+                            </div>
+                        </div>
+                        <div class="submenu-delimiter"></div>
+                        <div class="link-block">
+                            <div class="link" link="https://www.feogames.ru/inventory.php">Инвентарь</div>
+                            <div class="link" link="https://www.feogames.ru/main.php">Обзор</div>
+                            <div class="link" link="https://www.feogames.ru/profile.php">Личный кабинет</div>
+                            <div class="link" link="https://www.feogames.ru/in-developing.php">В разработке</div>
+                            <div class="link" link="https://www.feogames.ru/mini-blog.php">Развитие проекта</div>
+                            <div class="link" link="https://www.feogames.ru/library.php">Библиотека ремесла</div>
+                            <div class="link" link="https://www.feogames.ru/updates.php">Список обновлений</div>
+                            <div class="link hidden">Финансовые операции</div>
+                        </div>
+                        <div class="submenu-delimiter"></div>
+                        <div class="status-block">
+                            <div class="status status-1">
+                                <div class="status-img"></div>
+                                <div class="status-name">Готов общаться</div>
+                            </div>
+                            <div class="status status-2">
+                                <div class="status-img"></div>
+                                <div class="status-name">Нет на месте</div>
+                            </div>
+                            <div class="status status-3">
+                                <div class="status-img"></div>
+                                <div class="status-name">Не беспокоить</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="nickname"><span class="status status-1"><span class="status-img"></span></span>jjj1956okamonro1338@mail.ru
+                </div>
+                <div class="avatar"><img src="https://www.feogames.ru/avatar/default.jpg"></div>
+                <div class="logout">Выйти</div>
+                <div class="shadow"></div>
+            </div>
+        </div>
+    </div>
+</header>
+<div id="pageContainer" class="map world-map-info-panel-show" style="height: 915px;">
+    <div id="map" class="hidden">
+        <div id="world-map-canvas">
+            <canvas id="world-map-canvas-base-layer" width="1920" height="920"
+                    style="width: auto; height: auto;"></canvas>
+            <canvas id="world-map-canvas-second-layer" width="1920" height="920"
+                    style="width: auto; height: auto;"></canvas>
+            <div class="hover-layer"></div>
+        </div>
+        <div class="map-center-town"><img class="map-center-town-button"
+                                          src="https://st.feodal.feogames.ru/resource/map/center-town.png"></div>
+        <div id="route-control" class="disabled"><p class="title">Прокладка маршрута</p>
+            <p class="time"><span class="title">Время похода: </span><span class="value">00:00:00</span></p>
+            <p class="complete"><span class="title">Время завершения: </span><span class="value">00:00:00</span></p>
+            <div class="route-attack button-small disabled hidden">Набег</div>
+            <div class="route-replace button-big blue disabled">Переместить</div>
+            <div class="route-defend button-big green disabled">Подкрепление</div>
+            <div class="route-siege button-small disabled hidden">Осада</div>
+            <div class="route-cancel button-big brown">Отмена</div>
+            <div class="clear"></div>
+        </div>
+        <div class="gadget-hover disabled" style="left: 744px; top: 839px;">
+            <div class="gadget-hover-circle"></div>
+            <div class="gadget-hover-panel">
+                <div class="gadget-hover-block player-info">
+                    <div class="gadget-hover-info-block">
+                        <div class="player-level">Игрок: 74 ур.</div>
+                        <div class="player-name">КЫШЪ</div>
+                    </div>
+                    <div class="gadget-hover-avatar"><img src="/upload/avatars/default.jpg"></div>
+                </div>
+                <div class="delimiter"></div>
+                <div class="gadget-hover-block union-info">
+                    <div class="gadget-hover-info-block">
+                        <div class="union-players">В союзе: 12 чел.</div>
+                        <div class="union-name">Тропа Кабанов</div>
+                    </div>
+                    <div class="gadget-hover-avatar"><img src="/upload/blazons/default.png"></div>
+                </div>
+                <div class="delimiter"></div>
+                <div class="gadget-hover-block additional-info">
+                    <div class="gadget-hover-info-block">
+                        <div class="town-count">Городов: 20</div>
+                        <div class="town-name">Б-16</div>
+                    </div>
+                    <div class="gadget-hover-info">
+                        <div class="row"><label class="selectable">Координаты:</label> <span class="selectable">X: 153 Y: 27</span>
+                        </div>
+                        <div class="row"><label class="selectable">Очки города:</label> <span
+                                class="selectable">44 132</span></div>
+                        <div class="row"><label class="selectable">Захват</label> <span
+                                class="selectable">Возможен</span></div>
+                        <div class="row"><label class="selectable">Сектор:</label> <span class="selectable">0</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="world-map-info-panel" style="opacity: 1;">
+        <div class="background">
+            <div class="header"></div>
+            <div class="middle"></div>
+            <div class="footer"></div>
+        </div>
+        <div class="body">
+            <div class="header"><span>Информация о местности</span></div>
+            <div class="map-data selectable">
+                <div class="coords">
+                    <div class="label"><span>Координаты</span></div>
+                    <div class="value"><span>X: 53 Y: 255</span></div>
+                </div>
+                <div class="location">
+                    <div class="label"><span>Наименование</span></div>
+                    <div class="value"><span>Болото</span></div>
+                </div>
+                <div class="speed">
+                    <div class="label"><span>Проходимость</span></div>
+                    <div class="value"><span><span class="gray">40%</span><span class="green">100%</span></span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="resources">
+        <div class="resource" type="people">
+            <div class="img"></div>
+            <div class="value"><span>4000 / 4000</span></div>
+        </div>
+        <div class="resource" type="wood">
+            <div class="img"></div>
+            <div class="value"><span>587 790</span></div>
+            <div class="progress-bar">
+                <div class="trade-bar" style="width: 23%;"></div>
+                <div class="bar" style="width: 23%;"></div>
+            </div>
+        </div>
+        <div class="resource" type="iron">
+            <div class="img"></div>
+            <div class="value"><span>1 339 827</span></div>
+            <div class="progress-bar">
+                <div class="trade-bar" style="width: 51%;"></div>
+                <div class="bar" style="width: 51%;"></div>
+            </div>
+        </div>
+        <div class="resource" type="stone">
+            <div class="img"></div>
+            <div class="value"><span>388 298</span></div>
+            <div class="progress-bar">
+                <div class="trade-bar" style="width: 15%;"></div>
+                <div class="bar" style="width: 15%;"></div>
+            </div>
+        </div>
+        <div class="resource" type="gold">
+            <div class="img"></div>
+            <div class="value"><span>192 855</span></div>
+            <div class="progress-bar">
+                <div class="trade-bar" style="width: 22%;"></div>
+                <div class="bar" style="width: 22%;"></div>
+            </div>
+        </div>
+    </div>
+    <div id="header" class="zabs">
+        <ul id="system-buttons" class="cursor-over">
+            <li class="system-button reports active" tooltip="Отчёты">
+                <div class="button-img">
+                    <div class="counter"><span>99</span></div>
+                </div>
+            </li>
+            <li class="system-button conversations" tooltip="Сообщения">
+                <div class="button-img">
+                    <div class="counter"><span></span></div>
+                </div>
+            </li>
+            <li class="system-button commerce" tooltip="Торговля">
+                <div class="button-img">
+                    <div class="counter"><span></span></div>
+                </div>
+            </li>
+            <li class="system-button dungeon" tooltip="Приключения">
+                <div class="button-img">
+                    <div class="counter"><span></span></div>
+                </div>
+            </li>
+            <li class="system-button quests" tooltip="Задания">
+                <div class="button-img">
+                    <div class="counter"><span></span></div>
+                </div>
+            </li>
+            <li class="system-button union" tooltip="Союз">
+                <div class="button-img">
+                    <div class="counter"><span></span></div>
+                </div>
+            </li>
+            <li class="system-button rating" tooltip="Рейтинги">
+                <div class="button-img">
+                    <div class="counter"><span></span></div>
+                </div>
+            </li>
+            <li class="system-button unionCapital" tooltip="Столица Союза">
+                <div class="button-img">
+                    <div class="counter"><span></span></div>
+                </div>
+            </li>
+        </ul>
+        <div class="additional-block">
+            <div class="settings-button" tooltip="Настройки"></div>
+            <div class="logout-button" tooltip="Выход из мира"></div>
+        </div>
+    </div>
+    <div id="town-control-button"></div>
+    <div id="buy-resources-button"></div>
+    <div id="exchange-button"></div>
+    <div id="inventory-button"></div>
+    <div id="viewport" class="zabs" style=""></div>
+    <div id="player-info-panel" class="union">
+        <div class="background"></div>
+        <div class="experience">
+            <div class="bar-block">
+                <div class="bar" style="height: 66%;"></div>
+            </div>
+        </div>
+        <div class="name">Смолоду</div>
+        <div class="title">Герцог</div>
+        <div class="level">
+            <div class="label">Ур.</div>
+            <div class="value">81</div>
+        </div>
+        <div class="union-status" rank="6"></div>
+        <div class="avatar"><img src="/upload/avatars/default.jpg"></div>
+        <div class="union">
+            <div class="label">Союз:</div>
+            <div class="value">Викинги</div>
+        </div>
+        <div class="town-select-panel">
+            <div class="left"></div>
+            <div class="right"></div>
+            <div class="town-name">Журавцы</div>
+            <div class="down">
+                <div class="arrow"></div>
+            </div>
+        </div>
+        <div class="town-select-list-block">
+            <div class="town-select-list">
+                <div class="scroll-block disabled">
+                    <div class="scroll-bar">
+                        <div class="scroll-bar-background">
+                            <div class="scroll-bar-background-top"></div>
+                            <div class="scroll-bar-background-bottom"></div>
+                        </div>
+                        <div class="scroll-bar-pane">
+                            <div class="scroll-bar-handler" style="display: block; height: 218px; margin-top: 0px;">
+                                <div class="scroll-bar-handler-top"></div>
+                                <div class="scroll-bar-handler-middle"></div>
+                                <div class="scroll-bar-handler-bottom"></div>
+                            </div>
+                        </div>
+                        <div class="scroll-bar-down-button"></div>
+                        <div class="scroll-bar-up-button"></div>
+                    </div>
+                    <div class="scroll-body">
+                        <div class="town-select-list-body" style="margin-top: 0px;">
+                            <div class="town-select-list-item" town_id="958">
+                                <div class="town-name">Бахатово</div>
+                                <div class="location">X: 86 Y: 226</div>
+                            </div>
+                            <div class="town-select-list-item" town_id="277">
+                                <div class="town-name">Боровики</div>
+                                <div class="location">X: 54 Y: 260</div>
+                            </div>
+                            <div class="town-select-list-item" town_id="265">
+                                <div class="town-name">Волма</div>
+                                <div class="location">X: 48 Y: 255</div>
+                            </div>
+                            <div class="town-select-list-item current" town_id="281">
+                                <div class="town-name">Журавцы</div>
+                                <div class="location">X: 56 Y: 256</div>
+                            </div>
+                            <div class="town-select-list-item" town_id="273">
+                                <div class="town-name">Каменец</div>
+                                <div class="location">X: 52 Y: 255</div>
+                            </div>
+                            <div class="town-select-list-item" town_id="294">
+                                <div class="town-name">Полянки</div>
+                                <div class="location">X: 73 Y: 256</div>
+                            </div>
+                            <div class="town-select-list-item" town_id="192">
+                                <div class="town-name">Усть</div>
+                                <div class="location">X: 21 Y: 225</div>
+                            </div>
+                            <div class="town-select-list-item" town_id="714">
+                                <div class="town-name">Хатежино</div>
+                                <div class="location">X: 101 Y: 211</div>
+                            </div>
+                            <div class="town-select-list-item" town_id="328">
+                                <div class="town-name">Хватовка</div>
+                                <div class="location">X: 96 Y: 233</div>
+                            </div>
+                            <div class="town-select-list-item" town_id="833">
+                                <div class="town-name">Центавр-1</div>
+                                <div class="location">X: 105 Y: 169</div>
+                            </div>
+                            <div class="town-select-list-item" town_id="835">
+                                <div class="town-name">Центавр-2</div>
+                                <div class="location">X: 107 Y: 172</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="town-select-list-footer"></div>
+        </div>
+    </div>
+    <div class="union minimized" id="chat" style="height: 0px;">
+        <div class="button rules"></div>
+        <div class="button more"></div>
+        <div class="button less"></div>
+        <div class="button minimize">
+            <div class="content">Развернуть чат</div>
+        </div>    <!--<div class="button right"></div>-->    <!--<div class="button left"></div>-->
+        <div class="top-border"></div>
+        <div class="right-border"></div>
+        <div class="top-right-border"></div>
+        <div class="chat-message-container-underlay">
+            <div class="l"></div>
+            <div class="lt"></div>
+            <div class="lb"></div>
+            <div class="r"></div>
+            <div class="rb"></div>
+            <div class="rt"></div>
+            <div class="t"></div>
+            <div class="b"></div>
+        </div>
+        <ul class="zabs tabs">
+            <li class="common">Общий чат</li>
+            <li class="union">
+                <div class="union-icon"></div>
+                Твой союз
+            </li>
+            <li class="log">
+                <div class="log-icon"></div>
+                События
+            </li>
+        </ul>
+        <div class="scroll-pane scrollable">
+            <div class="chat-message-container selectable scroll-content" style="margin-top: -907px; width: 901px;">
+                <div class="chat-message union  selectable" id="chat-message-46939">
+                    <div class="time selectable">23:36:27</div>
+                    <div class="info-icon friend selectable"></div>
+                    <div class="nick selectable">Фон Шпее</div>
+                    <div class="text selectable">: Еще раз спасибо<span class="info-icon friend"></span><span
+                            class="chat-nick friend">Мясо</span>,
+                    </div>
+                </div>
+                <div class="chat-message union  selectable" id="chat-message-46940">
+                    <div class="time selectable">23:36:33</div>
+                    <div class="info-icon friend selectable"></div>
+                    <div class="nick selectable">Мясо</div>
+                    <div class="text selectable">: дим нада чего?</div>
+                </div>
+                <div class="chat-message union  selectable" id="chat-message-46941">
+                    <div class="time selectable">23:36:55</div>
+                    <div class="info-icon friend selectable"></div>
+                    <div class="nick selectable">Мясо</div>
+                    <div class="text selectable">: лям
+                        <div class="smile101"></div>
+                        камень голд?
+                    </div>
+                </div>
+                <div class="chat-message union  selectable" id="chat-message-46942">
+                    <div class="time selectable">23:37:21</div>
+                    <div class="info-icon friend selectable"></div>
+                    <div class="nick selectable">Дим</div>
+                    <div class="text selectable">: <span class="info-icon friend"></span><span class="chat-nick friend">Мясо</span>,
+                        Можно
+                    </div>
+                </div>
+                <div class="chat-message union  selectable" id="chat-message-46943">
+                    <div class="time selectable">23:37:50</div>
+                    <div class="info-icon friend selectable"></div>
+                    <div class="nick selectable">Мясо</div>
+                    <div class="text selectable">: <a href="http://clip2net.com/s/4iCmSxt"
+                                                      target="_blank">изображение</a> вот так еще сть
+                    </div>
+                </div>
+                <div class="chat-message union  selectable" id="chat-message-46944">
+                    <div class="time selectable">23:38:24</div>
+                    <div class="info-icon friend selectable"></div>
+                    <div class="nick selectable">Мясо</div>
+                    <div class="text selectable">: так если вам ресы есть что вы не говорите) у меня красным горит</div>
+                </div>
+                <div class="chat-message union  selectable" id="chat-message-46945">
+                    <div class="time selectable">23:38:37</div>
+                    <div class="info-icon friend selectable"></div>
+                    <div class="nick selectable">Мясо</div>
+                    <div class="text selectable">: пишите завтра и там после завтра</div>
+                </div>
+                <div class="chat-message union  selectable" id="chat-message-46946">
+                    <div class="time selectable">23:38:41</div>
+                    <div class="info-icon friend selectable"></div>
+                    <div class="nick selectable">Мясо</div>
+                    <div class="text selectable">: шо вы молчите</div>
+                </div>
+                <div class="chat-message union  selectable" id="chat-message-46947">
+                    <div class="time selectable">23:39:05</div>
+                    <div class="info-icon friend selectable"></div>
+                    <div class="nick selectable">Дим</div>
+                    <div class="text selectable">: <span class="info-icon friend"></span><span class="chat-nick friend">Мясо</span>,
+                        Золото 0,5 к возьму
+                    </div>
+                </div>
+                <div class="chat-message union  selectable" id="chat-message-46948">
+                    <div class="time selectable">23:39:14</div>
+                    <div class="info-icon friend selectable"></div>
+                    <div class="nick selectable">Мясо</div>
+                    <div class="text selectable">: 500к?</div>
+                </div>
+                <div class="chat-message union  selectable" id="chat-message-46949">
+                    <div class="time selectable">23:39:24</div>
+                    <div class="info-icon friend selectable"></div>
+                    <div class="nick selectable">Мясо</div>
+                    <div class="text selectable">: шо такое 0.5)</div>
+                </div>
+                <div class="chat-message union  selectable" id="chat-message-46950">
+                    <div class="time selectable">23:39:36</div>
+                    <div class="info-icon friend selectable"></div>
+                    <div class="nick selectable">Дим</div>
+                    <div class="text selectable">: <span class="info-icon friend"></span><span class="chat-nick friend">Мясо</span>,
+                        Да, 500к )
+                    </div>
+                </div>
+                <div class="chat-message union  selectable" id="chat-message-46951">
+                    <div class="time selectable">23:39:52</div>
+                    <div class="info-icon friend selectable"></div>
+                    <div class="nick selectable">Дим</div>
+                    <div class="text selectable">: <span class="info-icon friend"></span><span class="chat-nick friend">Мясо</span>,
+                        Спасибо!
+                    </div>
+                </div>
+                <div class="chat-message union  selectable" id="chat-message-46952">
+                    <div class="time selectable">23:40:06</div>
+                    <div class="info-icon friend selectable"></div>
+                    <div class="nick selectable">Мясо</div>
+                    <div class="text selectable">: да незачто говорите пишите епт</div>
+                </div>
+                <div class="chat-message union  selectable" id="chat-message-46953">
+                    <div class="time selectable">23:40:38</div>
+                    <div class="info-icon friend selectable"></div>
+                    <div class="nick selectable">Дим</div>
+                    <div class="text selectable">: <span class="info-icon friend"></span><span class="chat-nick friend">Мясо</span>,
+                        На рыков переходить затратно однако)
+                    </div>
+                </div>
+                <div class="chat-message union  selectable" id="chat-message-46954">
+                    <div class="time selectable">23:41:00</div>
+                    <div class="info-icon friend selectable"></div>
+                    <div class="nick selectable">Мясо</div>
+                    <div class="text selectable">: <span class="info-icon friend"></span><span class="chat-nick friend">Дим</span>,
+                        да пиши монеты сделаем тебе мне уже все изучено
+                    </div>
+                </div>
+                <div class="chat-message union  selectable" id="chat-message-46955">
+                    <div class="time selectable">23:41:29</div>
+                    <div class="info-icon friend selectable"></div>
+                    <div class="nick selectable">Мясо</div>
+                    <div class="text selectable">: завтра напишите кому чего</div>
+                </div>
+                <div class="chat-message union  selectable" id="chat-message-46956">
+                    <div class="time selectable">23:41:42</div>
+                    <div class="info-icon friend selectable"></div>
+                    <div class="nick selectable">Мясо</div>
+                    <div class="text selectable">: сча старайтесь на рыков и стрелков чтобы быть полезными</div>
+                </div>
+                <div class="chat-message union  selectable" id="chat-message-46957">
+                    <div class="time selectable">23:42:21</div>
+                    <div class="info-icon friend selectable"></div>
+                    <div class="nick selectable">Дим</div>
+                    <div class="text selectable">: <span class="info-icon friend"></span><span class="chat-nick friend">Мясо</span>,
+                        Я в 4-х городах изучил рыков, дальше не могу пока...
+                    </div>
+                </div>
+                <div class="chat-message union  selectable" id="chat-message-46958">
+                    <div class="time selectable">23:42:37</div>
+                    <div class="info-icon friend selectable"></div>
+                    <div class="nick selectable">Мясо</div>
+                    <div class="text selectable">: <span class="info-icon friend"></span><span class="chat-nick friend">Дим</span>,
+                        ну пиши завтра мне накапает подкину емае
+                    </div>
+                </div>
+                <div class="chat-message union  selectable" id="chat-message-46959">
+                    <div class="time selectable">23:42:52</div>
+                    <div class="info-icon friend selectable"></div>
+                    <div class="nick selectable">Дим</div>
+                    <div class="text selectable">: <span class="info-icon friend"></span><span class="chat-nick friend">Мясо</span>,
+                        Ок!
+                    </div>
+                </div>
+                <div class="chat-message union  selectable" id="chat-message-46960">
+                    <div class="time selectable">23:44:52</div>
+                    <div class="info-icon friend selectable"></div>
+                    <div class="nick selectable">Мясо</div>
+                    <div class="text selectable">: план такой: перйти на рыков помгать литле) все просто)</div>
+                </div>
+                <div class="chat-message union  selectable" id="chat-message-46966">
+                    <div class="time selectable">00:40:19</div>
+                    <div class="info-icon friend selectable"></div>
+                    <div class="nick selectable">Lanselot24</div>
+                    <div class="text selectable">: <span class="info-icon friend"></span><span class="chat-nick friend">Мясо</span>,
+                        А где же ты был когда в начале мира я города просил? "Да хорошь тебе" - все что ты написал...
+                        Сейчас бы косили бы этих поросят как мухоморов бы... Я в игре с 2012 ода, в свое время еще с
+                        Аккуратом потаскался... Теперь и рад бы помочь, но нечем. Видать не ту фракцию я выбрал.
+                    </div>
+                </div>
+                <div class="chat-message union  selectable" id="chat-message-46971">
+                    <div class="time selectable">00:45:53</div>
+                    <div class="info-icon friend selectable"></div>
+                    <div class="nick selectable">Смолоду</div>
+                    <div class="text selectable">: <span class="info-icon friend"></span><span class="chat-nick friend">Lanselot24</span>,
+                        в начале мира кажется их навалом было
+                    </div>
+                </div>
+                <div class="chat-message union  for-me selectable" id="chat-message-46972">
+                    <div class="time selectable">00:47:45</div>
+                    <div class="info-icon friend selectable"></div>
+                    <div class="nick selectable">Lanselot24</div>
+                    <div class="text selectable">: <span class="info-icon friend"></span><span class="chat-nick friend">Смолоду</span>,
+                        Да, не спорю. Только я в ***карты, и пока я доползу поселение уже забрали. Литле сколько не
+                        писал, все без толку.
+                    </div>
+                </div>
+                <div class="chat-message union  selectable" id="chat-message-46973">
+                    <div class="time selectable">00:49:37</div>
+                    <div class="info-icon friend selectable"></div>
+                    <div class="nick selectable">Фон Шпее</div>
+                    <div class="text selectable">: <span class="info-icon friend"></span><span class="chat-nick friend">Lanselot24</span>,
+                        С Аккуратом? Знакомый ник... А твой какой был? Может знакомы?
+                    </div>
+                </div>
+                <div class="chat-message union  selectable" id="chat-message-46974">
+                    <div class="time selectable">00:50:44</div>
+                    <div class="info-icon friend selectable"></div>
+                    <div class="nick selectable">Lanselot24</div>
+                    <div class="text selectable">: <span class="info-icon friend"></span><span class="chat-nick friend">Фон Шпее</span>,
+                        Этот же ник был.
+                    </div>
+                </div>
+                <div class="chat-message union  selectable" id="chat-message-46975">
+                    <div class="time selectable">00:51:37</div>
+                    <div class="info-icon friend selectable"></div>
+                    <div class="nick selectable">Фон Шпее</div>
+                    <div class="text selectable">: <span class="info-icon friend"></span><span class="chat-nick friend">Lanselot24</span>,
+                        Склероз
+                        <div class="smile9"></div>
+                        Либо подзабыл все, либо с Аккуратом сдружились уже позднее.
+                    </div>
+                </div>
+                <div class="chat-message union  selectable" id="chat-message-46976">
+                    <div class="time selectable">00:52:02</div>
+                    <div class="info-icon friend selectable"></div>
+                    <div class="nick selectable">Lanselot24</div>
+                    <div class="text selectable">: <span class="info-icon friend"></span><span class="chat-nick friend">Фон Шпее</span>,
+                        МариТон тебе ни о чем не говорит?
+                    </div>
+                </div>
+                <div class="chat-message union  selectable" id="chat-message-46977">
+                    <div class="time selectable">00:52:46</div>
+                    <div class="info-icon friend selectable"></div>
+                    <div class="nick selectable">Фон Шпее</div>
+                    <div class="text selectable">: <span class="info-icon friend"></span><span class="chat-nick friend">Lanselot24</span>,
+                        Говорит. Но сы почти ушли, когда они появились. Хотя Марина вероятно меня помнит
+                    </div>
+                </div>
+                <div class="chat-message union  selectable" id="chat-message-46978">
+                    <div class="time selectable">00:52:51</div>
+                    <div class="info-icon friend selectable"></div>
+                    <div class="nick selectable">Фон Шпее</div>
+                    <div class="text selectable">: *мы</div>
+                </div>
+                <div class="chat-message union  selectable" id="chat-message-46979">
+                    <div class="time selectable">00:53:06</div>
+                    <div class="info-icon friend selectable"></div>
+                    <div class="nick selectable">Фон Шпее</div>
+                    <div class="text selectable">: <span class="info-icon friend"></span><span class="chat-nick friend">Lanselot24</span>,
+                        Я в Сюрреале играл
+                    </div>
+                </div>
+                <div class="chat-message union  selectable" id="chat-message-46980">
+                    <div class="time selectable">00:53:21</div>
+                    <div class="info-icon friend selectable"></div>
+                    <div class="nick selectable">Lanselot24</div>
+                    <div class="text selectable">: <span class="info-icon friend"></span><span class="chat-nick friend">Фон Шпее</span>,
+                        Да, помню))
+                    </div>
+                </div>
+                <div class="chat-message union  selectable" id="chat-message-46981">
+                    <div class="time selectable">00:53:32</div>
+                    <div class="info-icon friend selectable"></div>
+                    <div class="nick selectable">Мясо</div>
+                    <div class="text selectable">: <span class="info-icon friend"></span><span class="chat-nick friend">Lanselot24</span>,
+                        все вначале регали поселения, ира сказала что ты без рега ходил
+                    </div>
+                </div>
+                <div class="chat-message union  selectable" id="chat-message-46982">
+                    <div class="time selectable">00:54:54</div>
+                    <div class="info-icon friend selectable"></div>
+                    <div class="nick selectable">Lanselot24</div>
+                    <div class="text selectable">: <span class="info-icon friend"></span><span class="chat-nick friend">Мясо</span>,
+                        Дважды ходил не зная. Потом ей написал. есть переписка где она меня мягко послала.
+                    </div>
+                </div>
+                <div class="chat-message union  selectable" id="chat-message-46996">
+                    <div class="time selectable">02:21:40</div>
+                    <div class="info-icon friend selectable"></div>
+                    <div class="nick selectable">Смолоду</div>
+                    <div class="text selectable">: <span class="info-icon friend"></span><span class="chat-nick friend">Мясо</span>,
+                        ну давай я упрусь и сделаю сраных стрелков, если ты еще сам не собрался их строить
+                    </div>
+                </div>
+                <div class="chat-message union  selectable" id="chat-message-47056">
+                    <div class="time selectable">12:34:21</div>
+                    <div class="info-icon neutral selectable"></div>
+                    <div class="nick selectable">Десница</div>
+                    <div class="text selectable">: <span style="color:springgreen;">Маркиз Фон Шпее взял в осаду город ХАЛЛГАРД (X: 196 Y: 244) Эсквайра Халл. </span>
+                    </div>
+                </div>
+                <div class="chat-message union  for-me selectable" id="chat-message-47058">
+                    <div class="time selectable">12:35:31</div>
+                    <div class="info-icon friend selectable"></div>
+                    <div class="nick selectable">Мясо</div>
+                    <div class="text selectable">: <span class="info-icon friend"></span><span class="chat-nick friend">Смолоду</span>,
+                        дим даниель вроде сказали что сделаю) можешь тоже сделать чтото на выбор стрелки, рыки.
+                    </div>
+                </div>
+                <div class="chat-message union  selectable" id="chat-message-47060">
+                    <div class="time selectable">13:29:21</div>
+                    <div class="info-icon neutral selectable"></div>
+                    <div class="nick selectable">Десница</div>
+                    <div class="text selectable">: <span style="color:lawngreen;">Маркиз Фон Шпее захватил город ХАЛЛГАРД (X: 196 Y: 244) Эсквайра Халл. Эсквайр лишился всех своих городов и был вынужден пуститься в бега.</span>
+                    </div>
+                </div>
+                <div class="chat-message union  selectable" id="chat-message-47063">
+                    <div class="time selectable">15:19:59</div>
+                    <div class="info-icon neutral selectable"></div>
+                    <div class="nick selectable">Десница</div>
+                    <div class="text selectable">: <span style="color:springgreen;">Маркиз Дим взял в осаду город Поселение (X: 140 Y: 189) Императора Варвары. </span>
+                    </div>
+                </div>
+                <div class="chat-message union  selectable" id="chat-message-47064">
+                    <div class="time selectable">15:39:59</div>
+                    <div class="info-icon neutral selectable"></div>
+                    <div class="nick selectable">Десница</div>
+                    <div class="text selectable">: <span style="color:lawngreen;">Маркиз Дим захватил город Поселение (X: 140 Y: 189) Императора Варвары. </span>
+                    </div>
+                </div>
+                <div class="chat-message union  for-me selectable" id="chat-message-47091">
+                    <div class="time selectable">17:46:58</div>
+                    <div class="info-icon friend selectable"></div>
+                    <div class="nick selectable">Даниель</div>
+                    <div class="text selectable">: <span class="info-icon friend"></span><span class="chat-nick friend">Смолоду</span>,
+                        что я должен был сделать?
+                    </div>
+                </div>
+                <div class="chat-message union  selectable" id="chat-message-47092">
+                    <div class="time selectable">17:47:10</div>
+                    <div class="info-icon friend selectable"></div>
+                    <div class="nick selectable">Даниель</div>
+                    <div class="text selectable">: я в 4-ех городах перестраиваюсь на рыков</div>
+                </div>
+                <div class="chat-message union  selectable" id="chat-message-47138">
+                    <div class="time selectable">21:26:49</div>
+                    <div class="info-icon friend selectable"></div>
+                    <div class="nick selectable">Мясо</div>
+                    <div class="text selectable">: <span class="info-icon friend"></span><span class="chat-nick friend">Даниель</span>,
+                        и по фулке луков и арб?
+                    </div>
+                </div>
+                <div class="chat-message union  selectable" id="chat-message-47159">
+                    <div class="time selectable">21:41:22</div>
+                    <div class="info-icon friend selectable"></div>
+                    <div class="nick selectable">Даниель</div>
+                    <div class="text selectable">: <span class="info-icon friend"></span><span class="chat-nick friend">Мясо</span>,
+                        фулка арбов в З-4
+                    </div>
+                </div>
+                <div class="chat-message union  selectable" id="chat-message-47274">
+                    <div class="time selectable">01:01:42</div>
+                    <div class="info-icon neutral selectable"></div>
+                    <div class="nick selectable">Десница</div>
+                    <div class="text selectable">: <span style="color:springgreen;">Граф vitalXXX взял в осаду город Динамо (X: 97 Y: 157) Императора Alexandrus. </span>
+                    </div>
+                </div>
+                <div class="chat-message union  selectable" id="chat-message-47287">
+                    <div class="time selectable">01:06:42</div>
+                    <div class="info-icon neutral selectable"></div>
+                    <div class="nick selectable">Десница</div>
+                    <div class="text selectable">: <span style="color:orangered;">Император Alexandrus отразил нападение Графа vitalXXX на город Динамо (X: 97 Y: 157) . Осада с города снята. </span>
+                    </div>
+                </div>
+                <div class="chat-message union  selectable" id="chat-message-47337">
+                    <div class="time selectable">02:57:53</div>
+                    <div class="info-icon neutral selectable"></div>
+                    <div class="nick selectable">Десница</div>
+                    <div class="text selectable">: <span style="color:orangered">Император Alexandrus из города Панталоны (X: 118 Y: 157) начал наступление на город Центавр-1 (X: 105 Y: 169) Герцога Смолоду. Время прибытия 28.05 в 05:37:04.</span>
+                    </div>
+                </div>
+                <div class="chat-message union  selectable" id="chat-message-47339">
+                    <div class="time selectable">03:17:11</div>
+                    <div class="info-icon friend selectable"></div>
+                    <div class="nick selectable">Смолоду</div>
+                    <div class="text selectable">: спам</div>
+                </div>
+                <div class="chat-message common  selectable" id="chat-message-47403">
+                    <div class="time selectable">08:50:20</div>
+                    <div class="info-icon friend selectable"></div>
+                    <div class="nick selectable">Little Devil</div>
+                    <div class="text selectable">: <span class="info-icon enemy"></span><span class="chat-nick enemy">ridik</span>,
+                        он вроде больше по нутелле болеет
+                        <div class="smile5"></div>
+                    </div>
+                </div>
+                <div class="chat-message common  selectable" id="chat-message-47404">
+                    <div class="time selectable">08:56:48</div>
+                    <div class="info-icon enemy selectable"></div>
+                    <div class="nick selectable">ridik</div>
+                    <div class="text selectable">: сыр не любит зараза
+                        <div class="smile16"></div>
+                    </div>
+                </div>
+                <div class="chat-message common news selectable" id="chat-message-47405">
+                    <div class="time selectable">09:00:01</div>
+                    <div class="text selectable">Вы защищены от нападений, пока опущен флаг на площади вашего города.
+                        Поднятие флага позволяет атаковать других игроков, поднявших флаг. Для нападения на логова флаг
+                        поднимать не нужно.
+                    </div>
+                </div>
+                <div class="chat-message common  selectable" id="chat-message-47411">
+                    <div class="time selectable">09:26:46</div>
+                    <div class="info-icon enemy selectable"></div>
+                    <div class="nick selectable">Clyde Barrow</div>
+                    <div class="text selectable">: <span class="info-icon friend"></span><span class="chat-nick friend">Little Devil</span>,
+                        эх ты) бедный Сиут до 2х ночи задницу рвал ставя атаки, а ты взяла и тараны забыла кинуть)
+                    </div>
+                </div>
+                <div class="chat-message common  selectable" id="chat-message-47412">
+                    <div class="time selectable">09:31:39</div>
+                    <div class="info-icon friend selectable"></div>
+                    <div class="nick selectable">Little Devil</div>
+                    <div class="text selectable">: <span class="info-icon enemy"></span><span class="chat-nick enemy">Clyde Barrow</span>,
+                        так у меня их тут нет же
+                        <div class="smile5"></div>
+                        ну ладно, сделаю
+                    </div>
+                </div>
+                <div class="chat-message common  selectable" id="chat-message-47414">
+                    <div class="time selectable">09:47:53</div>
+                    <div class="info-icon enemy selectable"></div>
+                    <div class="nick selectable">Чечевица</div>
+                    <div class="text selectable">: <span class="info-icon friend"></span><span class="chat-nick friend">Little Devil</span>,
+                        чужие штоли стояли? ))
+                    </div>
+                </div>
+                <div class="chat-message common  selectable" id="chat-message-47415">
+                    <div class="time selectable">09:51:41</div>
+                    <div class="info-icon enemy selectable"></div>
+                    <div class="nick selectable">ridik</div>
+                    <div class="text selectable">: <span class="info-icon enemy"></span><span class="chat-nick enemy">Clyde Barrow</span>,
+                        привет пиратский хрюкатэло
+                    </div>
+                </div>
+                <div class="chat-message common  selectable" id="chat-message-47416">
+                    <div class="time selectable">09:56:06</div>
+                    <div class="info-icon friend selectable"></div>
+                    <div class="nick selectable">Little Devil</div>
+                    <div class="text selectable">: вы прям все как из леса вышли, одни и те же вопросы
+                        <div class="smile2"></div>
+                    </div>
+                </div>
+                <div class="chat-message common  selectable" id="chat-message-47417">
+                    <div class="time selectable">09:57:37</div>
+                    <div class="info-icon enemy selectable"></div>
+                    <div class="nick selectable">Чечевица</div>
+                    <div class="text selectable">: <span class="info-icon friend"></span><span class="chat-nick friend">Little Devil</span>,
+                        из ларца
+                        <div class="smile2"></div>
+                    </div>
+                </div>
+                <div class="chat-message union  selectable" id="chat-message-47418">
+                    <div class="time selectable">09:57:44</div>
+                    <div class="info-icon friend selectable"></div>
+                    <div class="nick selectable">Смолоду</div>
+                    <div class="text selectable">: Little Devil : Атакуем город 118-157, начало осады в 21-00 29.05.2023
+                        (атакуем КАВОЙ)
+                    </div>
+                </div>
+                <div class="chat-message common news selectable" id="chat-message-47420">
+                    <div class="time selectable">10:00:01</div>
+                    <div class="text selectable">Не забывайте каждый день исследовать заброшенные руины, шахты и
+                        обелиски. В них можно найти ценные ингредиенты и чертежи для создания артефактов.
+                    </div>
+                </div>
+                <div class="chat-message common  selectable" id="chat-message-47422">
+                    <div class="time selectable">10:19:09</div>
+                    <div class="info-icon enemy selectable"></div>
+                    <div class="nick selectable">Clyde Barrow</div>
+                    <div class="text selectable">: <span class="info-icon enemy"></span><span class="chat-nick enemy">ridik</span>,
+                        хеллоу мистер свин!
+                    </div>
+                </div>
+                <div class="chat-message common  selectable" id="chat-message-47423">
+                    <div class="time selectable">10:30:35</div>
+                    <div class="info-icon enemy selectable"></div>
+                    <div class="nick selectable">ridik</div>
+                    <div class="text selectable">: <span class="info-icon enemy"></span><span class="chat-nick enemy">Clyde Barrow</span>,
+                        тапка стала хитрей на панталоны уже не клюёт
+                    </div>
+                </div>
+                <div class="chat-message common news selectable" id="chat-message-47424">
+                    <div class="time selectable">11:00:02</div>
+                    <div class="text selectable">Чтобы в самом начале вашего развития набрать немного опыта и ресурсов,
+                        исследуйте логова разбойников.
+                    </div>
+                </div>
+                <div class="chat-message common  selectable" id="chat-message-47427">
+                    <div class="time selectable">11:19:14</div>
+                    <div class="info-icon enemy selectable"></div>
+                    <div class="nick selectable">ridik</div>
+                    <div class="text selectable">: бей тапку
+                        <div class="smile16"></div>
+                    </div>
+                </div>
+                <div class="chat-message common  selectable" id="chat-message-47431">
+                    <div class="time selectable">11:25:15</div>
+                    <div class="info-icon friend selectable"></div>
+                    <div class="nick selectable">Little Devil</div>
+                    <div class="text selectable">: и все то хотят меня побить)</div>
+                </div>
+                <div class="chat-message common  selectable" id="chat-message-47432">
+                    <div class="time selectable">11:25:26</div>
+                    <div class="info-icon enemy selectable"></div>
+                    <div class="nick selectable">ridik</div>
+                    <div class="text selectable">: сырок просрочился пора его в утиль
+                        <div class="smile2"></div>
+                    </div>
+                </div>
+                <div class="chat-message common  selectable" id="chat-message-47433">
+                    <div class="time selectable">11:26:00</div>
+                    <div class="info-icon friend selectable"></div>
+                    <div class="nick selectable">Little Devil</div>
+                    <div class="text selectable">: <span class="info-icon enemy"></span><span class="chat-nick enemy">ridik</span>,
+                        вот возьму обижусь на вас и уйду
+                        <div class="smile11"></div>
+                        злыдни) будете воевать только с фермерами)
+                    </div>
+                </div>
+                <div class="chat-message common  selectable" id="chat-message-47434">
+                    <div class="time selectable">11:26:03</div>
+                    <div class="info-icon enemy selectable"></div>
+                    <div class="nick selectable">ridik</div>
+                    <div class="text selectable">: <span class="info-icon friend"></span><span class="chat-nick friend">Little Devil</span>,
+                        тыж главный моск этого стада
+                    </div>
+                </div>
+                <div class="chat-message common news selectable" id="chat-message-47438">
+                    <div class="time selectable">12:00:01</div>
+                    <div class="text selectable">Не забывайте каждый день исследовать заброшенные руины, шахты и
+                        обелиски. В них можно найти ценные ингредиенты и чертежи для создания артефактов.
+                    </div>
+                </div>
+                <div class="chat-message union  selectable" id="chat-message-47440">
+                    <div class="time selectable">13:00:01</div>
+                    <div class="info-icon neutral selectable"></div>
+                    <div class="nick selectable">Десница</div>
+                    <div class="text selectable">: <span style="color:springgreen;">Маркиз iris взял в осаду город Поселение (X: 153 Y: 217) Императора Варвары. </span>
+                    </div>
+                </div>
+                <div class="chat-message common news selectable" id="chat-message-47441">
+                    <div class="time selectable">13:00:01</div>
+                    <div class="text selectable">Вы защищены от нападений, пока опущен флаг на площади вашего города.
+                        Поднятие флага позволяет атаковать других игроков, поднявших флаг. Для нападения на логова флаг
+                        поднимать не нужно.
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-bar"
+                 style="height: 0px; padding-top: 3px; padding-bottom: 3px; background-position: 0% -907px; display: block;">
+                <div class="slider ui-draggable" style="height: 18px; top: -24px;">
+                    <div class="up"></div>
+                    <div class="down"></div>
+                    <div class="middle" style="height: 0px;"></div>
+                    <div class="middle-arrow" style="height: 0px;"></div>
+                </div>
+                <div class="rope-top"></div>
+                <div class="rope-bottom"></div>
+            </div>
+        </div>
+        <div class="zabs" id="chatDiv">
+            <div class="l"></div>
+            <div class="lt"></div>
+            <div class="lb"></div>
+            <div class="r"></div>
+            <div class="rb"></div>
+            <div class="rt"></div>
+            <div class="t"></div>
+            <div class="b"></div>
+            <div class="chat-input"><input type="text" id="chatText"></div>
+        </div>
+        <div class="send-button zabs">Отправить</div>
+        <div class="smiles-button zabs"></div>
+        <div class="smiles-container">
+            <div class="l"></div>
+            <div class="lt"></div>
+            <div class="lb"></div>
+            <div class="r"></div>
+            <div class="rb"></div>
+            <div class="rt"></div>
+            <div class="t"></div>
+            <div class="b"></div>
+            <div class="smile smile0">^_^</div>
+            <div class="smile smile1">8-)</div>
+            <div class="smile smile2">:-D</div>
+            <div class="smile smile3">:-[</div>
+            <div class="smile smile4">=-O</div>
+            <div class="smile smile5">:-|</div>
+            <div class="smile smile6">{HAPPY}</div>
+            <div class="smile smile7">{EVIL}</div>
+            <div class="smile smile8">{CRAZY}</div>
+            <div class="smile smile9">{CRY}</div>
+            <div class="smile smile10">X_x</div>
+            <div class="smile smile11">8/</div>
+            <div class="smile smile12">8-/</div>
+            <div class="smile smile13">O_O</div>
+            <div class="smile smile14">{HI}</div>
+            <div class="smile smile15">{beer}</div>
+            <div class="smile smile16">{пират}</div>
+            <div class="smile smile17">{капитан}</div>
+            <div class="smile smile18">{индеец}</div>
+        </div>
+        <div id="client-clock">
+            <div class="clock-pane">            <!--[if (IE 8)|(IE 9 ) ]> <span class="timezone oldIE"></span><span
+                    class="time-value oldIE">20:40:05</span> <![endif]-->            <!--[if (gt IE 9)|!(IE)]><!-->
+                <span class="timezone">ST</span><span class="time-value">13:16:19</span> <!--<![endif]-->        </div>
+            <div class="close"></div>
+            <div class="open"></div>
+        </div>
+        <div id="music-icon" class="muted"></div>
+    </div>
+    <div id="viewport-gadgets">
+        <div id="incoming-attack-icon" class="not-display new-routes">
+            <div class="icon"></div>
+            <div class="anim-1"></div>
+            <div class="anim-2"></div>
+            <label></label></div>
+        <div class="column-block">
+            <div id="hunger-icon" class="not-display">            <!--[if (IE 8)|(IE 9 ) ]> <label
+                    class="oldIE"></label> <![endif]-->            <!--[if (gt IE 9)|!(IE)]><!--> <label></label>
+                <!--<![endif]-->        </div>
+            <div id="premium-expired-icon" class="not-display"></div>
+            <div id="resources-expired-icon" class="not-display"></div>
+            <div id="chat-ban-icon" class="not-display"></div>
+            <div id="raise-flag-icon" class="not-display"></div>
+            <div id="capture-town-icon" class="not-display"></div>
+            <div id="game-event-icon" class="not-display"></div>
+            <div id="rpg-icon" class=""></div>
+            <div id="tutorial-icon" class="not-display"></div>
+            <div id="siege-icon" class=""></div>
+        </div>
+    </div>
+    <div id="mini-map" class="higher">
+        <div class="background"></div>
+        <div class="mini-map-viewport">
+            <div class="back">
+                <canvas id="mini-map-canvas" width="250" height="250" style="width: auto; height: auto;"></canvas>
+            </div>
+            <div class="selection"
+                 style="width: 76.8px; height: 36.52px; margin-left: -42.4px; margin-top: -22.26px;"></div>
+            <div class="hover-layer"></div>
+        </div>
+        <div class="zoom-buttons">
+            <div class="zoom-button plus"></div>
+            <div class="zoom-button minus"></div>
+        </div>
+        <div class="coordinate-panel">
+            <div class="input">
+                <div class="label">X:</div>
+                <input type="text" title="X" value="0"></div>
+            <div class="input">
+                <div class="label">Y:</div>
+                <input type="text" title="Y" value="0"></div>
+            <div class="submit">Перейти</div>
+        </div>
+    </div>
+</div>
+<div id="external-frame"></div>
+
+<div id="coins-exchange-window">
+    <div class="block-ui"></div>
+    <div class="window-body">
+        <div class="title">Покупка монет</div>
+        <div class="content">
+            <div class="coins">
+                <div class="label">В вашей казне</div>
+                <div class="value"></div>
+            </div>
+            <div class="input-block">
+                <div class="left-button"></div>
+                <div class="right-button"></div>
+                <div class="input"><input type="text" title="coins" value="1"></div>
+                <div class="max-button"></div>
+            </div>
+            <div class="resources">
+                <div class="resource" type="wood">
+                    <div class="img"></div>
+                    <div class="value">0</div>
+                </div>
+                <div class="resource" type="iron">
+                    <div class="img"></div>
+                    <div class="value">0</div>
+                </div>
+                <div class="resource" type="stone">
+                    <div class="img"></div>
+                    <div class="value">0</div>
+                </div>
+                <div class="resource" type="gold">
+                    <div class="img"></div>
+                    <div class="value">0</div>
+                </div>
+            </div>
+        </div>
+        <div class="exchange-button"></div>
+        <div class="cancel-button"></div>
+    </div>
+</div>
+<div id="coins-donate-window">
+    <div class="block-ui"></div>
+    <div class="window-body">
+        <div class="title">Сделать взнос</div>
+        <div class="content">
+            <div class="coins">
+                <div class="label">В вашей казне</div>
+                <div class="value"></div>
+            </div>
+            <div class="input-block">
+                <div class="left-button"></div>
+                <div class="right-button"></div>
+                <div class="input"><input type="text" title="coins" value="1"></div>
+                <div class="max-button"></div>
+            </div>
+        </div>
+        <div class="accept-button"></div>
+        <div class="cancel-button"></div>
+    </div>
+</div>
+<div id="tooltip" style="display: none; left: 49px; right: auto; top: 531px;" class=""><h3 style="display: none;">
+    Закрыть</h3>
+    <div class="body" style="display: block;"><b>Вы участвуете в осаде.</b><br><br>Нажмите, чтобы просмотреть список
+        осад.
+    </div>
+    <div class="url" style="display: none;"></div>
+</div>
+<div id="window-yes-no">
+    <div class="block-ui"></div>
+    <div class="window-body">
+        <div class="body">
+            <div class="text">
+                <div class="value"></div>
+            </div>
+            <div class="wof-buttons">
+                <div class="wof-button yes"></div>
+                <div class="wof-button no"></div>
+            </div>
+            <div class="close"></div>
+        </div>
+    </div>
+</div>
+<div id="wof-window" style="visibility: visible; opacity: 1;">
+    <div class="block-ui"></div>
+    <div id="wof-window-body" class="">
+        <div class="background"></div>
+        <div class="title">ОСАДЫ</div>
+        <div class="close"></div>
+        <div class="delimiter"></div>
+        <div class="content">
+            <div id="siege-window">
+                <div class="central-block">
+                    <div class="delimiter"></div>
+                    <div class="left-panel">
+                        <div class="capture-block no-capture">
+                            <div class="capture-label">Город захватит:</div>
+                            <div class="no-aristocrat">В вашей армии нет аристократов.<br>Осада закончится без захвата.
+                            </div>
+                            <div class="capture-name label">iris</div>
+                        </div>
+                        <div class="phase-block">
+                            <div class="phase-label">Текущий раунд: <span class="phase-number">3</span></div>
+                            <div class="time-label">Время до начала<br>следующего раунда:</div>
+                            <div class="timer" next-time="1685269201">00:03:42</div>
+                        </div>
+                        <div class="additional-info">
+                            <div class="aristocrat-count">
+                                <div class="aristocrat-count-label">Аристократов в составе армии:</div>
+                                <div class="aristocrat-count-value">0</div>
+                            </div>
+                            <div class="ram-count">
+                                <div class="ram-count-label">Таранов в составе армии:</div>
+                                <div class="ram-count-value">0</div>
+                            </div>
+                        </div>
+                        <div class="exp-block">
+                            <div class="exp">
+                                <div class="exp-label">Опыт за осаду:</div>
+                                <div class="exp-value">0</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="central-panel">
+                        <div class="info-block">
+                            <div class="label">Осаждает:</div>
+                            <div class="value"><span class="player">iris</span></div>
+                        </div>
+                        <div class="troops-block">
+                            <div class="labels">
+                                <div class="troops-was">Всего:</div>
+                                <div class="troops-now">Осталось:</div>
+                                <div class="troops-losses">Потери:</div>
+                            </div>
+                            <div class="troop-1">
+                                <div class="img"><img src="https://st.feodal.feogames.ru/resource/troops/1.png?v=1">
+                                </div>
+                                <div class="troops-was">17056</div>
+                                <div class="troops-now">6126</div>
+                                <div class="troops-losses">10930</div>
+                            </div>
+                            <div class="troop-2">
+                                <div class="img"><img src="https://st.feodal.feogames.ru/resource/troops/2.png?v=1">
+                                </div>
+                                <div class="troops-was">0</div>
+                                <div class="troops-now">0</div>
+                                <div class="troops-losses">0</div>
+                            </div>
+                            <div class="troop-3">
+                                <div class="img"><img src="https://st.feodal.feogames.ru/resource/troops/3.png?v=1">
+                                </div>
+                                <div class="troops-was">7663</div>
+                                <div class="troops-now">5664</div>
+                                <div class="troops-losses">1999</div>
+                            </div>
+                        </div>
+                        <div class="troops-block">
+                            <div class="labels">
+                                <div class="troops-was">Всего:</div>
+                                <div class="troops-now">Осталось:</div>
+                                <div class="troops-losses">Потери:</div>
+                            </div>
+                            <div class="troop-4">
+                                <div class="img"><img src="https://st.feodal.feogames.ru/resource/troops/4.png?v=1">
+                                </div>
+                                <div class="troops-was">1150</div>
+                                <div class="troops-now">1086</div>
+                                <div class="troops-losses">64</div>
+                            </div>
+                            <div class="troop-5">
+                                <div class="img"><img src="https://st.feodal.feogames.ru/resource/troops/5.png?v=1">
+                                </div>
+                                <div class="troops-was">0</div>
+                                <div class="troops-now">0</div>
+                                <div class="troops-losses">0</div>
+                            </div>
+                            <div class="troop-6">
+                                <div class="img"><img src="https://st.feodal.feogames.ru/resource/troops/6.png?v=1">
+                                </div>
+                                <div class="troops-was">0</div>
+                                <div class="troops-now">0</div>
+                                <div class="troops-losses">0</div>
+                            </div>
+                        </div>
+                        <div class="troops-block">
+                            <div class="labels">
+                                <div class="troops-was">Всего:</div>
+                                <div class="troops-now">Осталось:</div>
+                                <div class="troops-losses">Потери:</div>
+                            </div>
+                            <div class="troop-7">
+                                <div class="img"><img src="https://st.feodal.feogames.ru/resource/troops/7.png?v=1">
+                                </div>
+                                <div class="troops-was">3243</div>
+                                <div class="troops-now">2485</div>
+                                <div class="troops-losses">758</div>
+                            </div>
+                            <div class="troop-8">
+                                <div class="img"><img src="https://st.feodal.feogames.ru/resource/troops/8.png?v=1">
+                                </div>
+                                <div class="troops-was">2450</div>
+                                <div class="troops-now">2046</div>
+                                <div class="troops-losses">404</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right-panel">
+                        <div class="info-block">
+                            <div class="label">Обороняется:</div>
+                            <div class="value"><span class="player">Варвары</span></div>
+                        </div>
+                        <div class="town-info-block">
+                            <div class="town-name">
+                                <div class="label">Город:</div>
+                                <div class="value"><span class="town-name" x="153" y="217">Поселение</span></div>
+                            </div>
+                            <div class="coords">
+                                <div class="label">Координаты:</div>
+                                <div class="value">X: 153 Y: 217</div>
+                            </div>
+                            <div class="loyalty hidden">
+                                <div class="label">Лояльность:</div>
+                                <div class="value">X: 153 Y: 217</div>
+                            </div>
+                        </div>
+                        <div class="troops-block">
+                            <div class="troops-block-label">Потери противника</div>
+                            <div class="troops">
+                                <div class="troop troop-1">
+                                    <div class="img"><img src="https://st.feodal.feogames.ru/resource/troops/1.png?v=1">
+                                    </div>
+                                    <div class="losses">0</div>
+                                </div>
+                                <div class="troop troop-2">
+                                    <div class="img"><img src="https://st.feodal.feogames.ru/resource/troops/2.png?v=1">
+                                    </div>
+                                    <div class="losses">0</div>
+                                </div>
+                                <div class="troop troop-3">
+                                    <div class="img"><img src="https://st.feodal.feogames.ru/resource/troops/3.png?v=1">
+                                    </div>
+                                    <div class="losses">0</div>
+                                </div>
+                                <div class="troop troop-4">
+                                    <div class="img"><img src="https://st.feodal.feogames.ru/resource/troops/4.png?v=1">
+                                    </div>
+                                    <div class="losses">0</div>
+                                </div>
+                                <div class="troop troop-5">
+                                    <div class="img"><img src="https://st.feodal.feogames.ru/resource/troops/5.png?v=1">
+                                    </div>
+                                    <div class="losses">153</div>
+                                </div>
+                                <div class="troop troop-6">
+                                    <div class="img"><img src="https://st.feodal.feogames.ru/resource/troops/6.png?v=1">
+                                    </div>
+                                    <div class="losses">11364</div>
+                                </div>
+                                <div class="troop troop-7">
+                                    <div class="img"><img src="https://st.feodal.feogames.ru/resource/troops/7.png?v=1">
+                                    </div>
+                                    <div class="losses">392</div>
+                                </div>
+                                <div class="troop troop-8">
+                                    <div class="img"><img src="https://st.feodal.feogames.ru/resource/troops/8.png?v=1">
+                                    </div>
+                                    <div class="losses">212</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom-block">
+                    <div class="delimiter"></div>
+                    <div class="back-button"></div>
+                    <div class="exit-button"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>

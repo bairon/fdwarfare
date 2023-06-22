@@ -13,16 +13,16 @@ public class FormationFinder {
     public void test1() {
         Army bestAttacking;
         int  bestAttackingWins = 0;
-        int totalLimit = 20000;
+        int totalLimit = 25000;
         int landsLimit = 0;
-        int cavLimit = totalLimit;
+        int cavLimit = 0;
         int swordLimit = 0;
         int knightLimit = totalLimit;
-        int halberdLimit = totalLimit;
+        int halberdLimit = 0;
         int spearLimit = 0;
-        int crossbowLimit = 8000;
-        int bowLimit = 8000;
-        int step = 2000;
+        int crossbowLimit = totalLimit / 2;
+        int bowLimit = totalLimit;
+        int step = 1000;
         for (int lands = 0; lands <= totalLimit && lands <= landsLimit; lands += step) {
             for (int cav = 0; cav <= totalLimit - lands && cav <= cavLimit; cav += step) {
                 for (int sword = 0; sword <= swordLimit && sword <= totalLimit - lands - cav; sword += step) {
@@ -30,7 +30,7 @@ public class FormationFinder {
                         for (int halberd = 0; halberd <= halberdLimit && halberd <= totalLimit - lands - cav - sword - bow; halberd += step) {
                             for (int spear = 0; spear <= spearLimit && spear <= totalLimit - lands - cav - sword - bow - halberd; spear += step) {
                                 for (int crossbow = 0; crossbow <= crossbowLimit && crossbow <= totalLimit - lands - cav - sword - bow - halberd - spear; crossbow += step) {
-                                    int knight = totalLimit - lands - cav - sword - halberd - spear - crossbow;
+                                    int knight = totalLimit - lands - cav - sword - halberd - spear - crossbow - bow;
                                         if (lands + cav + sword + knight + halberd + spear + crossbow + bow == 0) continue;
                                         if (lands + cav + sword + knight == 0) continue;
                                         List<Player> attacker = Collections.singletonList(createAttacker(lands, cav, sword, knight, halberd, spear, crossbow, bow));
@@ -45,7 +45,7 @@ public class FormationFinder {
                                                     for (int halberd2 = 0; halberd2 <= halberdLimit && halberd2 <= totalLimit - lands2 - cav2 - sword2 - bow2; halberd2 += step) {
                                                         for (int spear2 = 0; spear2 <= spearLimit && spear2 <= totalLimit - lands2 - cav2 - sword2 - bow2 - halberd2; spear2 += step) {
                                                             for (int crossbow2 = 0; crossbow2 <= crossbowLimit && crossbow2 <= totalLimit - lands2 - cav2 - sword2 - bow2 - halberd2 - spear2; crossbow2 += step) {
-                                                                int knight2 = totalLimit - lands2 - cav2 - sword2 - halberd2 - spear2 - crossbow2;
+                                                                int knight2 = totalLimit - lands2 - cav2 - sword2 - halberd2 - spear2 - crossbow2 - bow2;
                                                                 if (lands2 + cav2 + sword2 + knight2 + halberd2 + spear2 + crossbow2 + bow2 == 0) continue;
                                                                 if (lands2 + cav2 + sword2 + knight2 == 0) continue;
 
@@ -93,13 +93,13 @@ public class FormationFinder {
 
     private Player createAttacker(int lands, int cav, int sword, int knight, int halberd, int spear, int crossbow, int bow) {
         return new Player(Collections.singletonList(createArmyAttackers(lands, cav, sword, knight, halberd, spear, crossbow, bow)),
-                new Bonus(0, 0, 6, 8, 4),
-                new Bonus(0, 0, 13, 5, 0));
+                new Bonus(0, 0, 13, 5, 11),
+                new Bonus(0, 0, 5, 5, 0));
     }
     private Player createDefender(int lands2, int cav2, int sword2, int knight2, int halberd2, int spear2, int crossbow2, int bow2) {
         return new Player(Collections.singletonList(createArmyDefenders(lands2, cav2, sword2, knight2, halberd2, spear2, crossbow2, bow2)),
-                new Bonus(0, 0, 6, 8, 4),
-                new Bonus(0, 0, 13, 5, 0));
+                new Bonus(0, 0, 13, 5, 11),
+                new Bonus(0, 0, 5, 5, 0));
     }
 
     private Army createArmyAttackers(int lands, int cav, int sword, int knight, int halberd, int spear, int crossbow, int bow) {   // атака

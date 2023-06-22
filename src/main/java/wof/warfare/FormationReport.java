@@ -28,6 +28,6 @@ public class FormationReport {
 
     @Override
     public String toString() {
-        return "\n" + unit.name() + ": " + perished;
+        return "\n" + unit.name() + ": " + perished + " Нанесли урона: " + dmgDealt;
     }
 }
