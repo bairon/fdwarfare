@@ -97,7 +97,7 @@ public class AttackUtil {
             return 0;
         }
 
-        int unitHp = target.unit.hitpoints;
+        int unitHp = target.hitpoints;
         for (Ability ability : target.unit.abilities) {
             if (ability instanceof HpModifier) {
                 unitHp = ((HpModifier) ability).modifyHp(target, unitHp);
