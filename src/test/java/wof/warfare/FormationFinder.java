@@ -13,16 +13,16 @@ public class FormationFinder {
     public void test1() {
         Army bestAttacking;
         int  bestAttackingWins = 0;
-        int totalLimit = 25000;
+        int totalLimit = 30000;
         int landsLimit = 0;
         int cavLimit = 0;
         int swordLimit = 0;
-        int knightLimit = totalLimit;
+        int knightLimit = (int) (totalLimit / 1.5);
         int halberdLimit = 0;
         int spearLimit = 0;
-        int crossbowLimit = totalLimit / 2;
-        int bowLimit = totalLimit;
-        int step = 1000;
+        int crossbowLimit = totalLimit / 3;
+        int bowLimit = totalLimit / 3;
+        int step = 1500;
         for (int lands = 0; lands <= totalLimit && lands <= landsLimit; lands += step) {
             for (int cav = 0; cav <= totalLimit - lands && cav <= cavLimit; cav += step) {
                 for (int sword = 0; sword <= swordLimit && sword <= totalLimit - lands - cav; sword += step) {
@@ -93,13 +93,13 @@ public class FormationFinder {
 
     private Player createAttacker(int lands, int cav, int sword, int knight, int halberd, int spear, int crossbow, int bow) {
         return new Player(Collections.singletonList(createArmyAttackers(lands, cav, sword, knight, halberd, spear, crossbow, bow)),
-                new Bonus(0, 0, 13, 5, 11),
-                new Bonus(0, 0, 5, 5, 0));
+                new Bonus(27, 0, 25, 23, 9),
+                new Bonus(0, 0, 0, 0, 0));
     }
     private Player createDefender(int lands2, int cav2, int sword2, int knight2, int halberd2, int spear2, int crossbow2, int bow2) {
         return new Player(Collections.singletonList(createArmyDefenders(lands2, cav2, sword2, knight2, halberd2, spear2, crossbow2, bow2)),
-                new Bonus(0, 0, 13, 5, 11),
-                new Bonus(0, 0, 5, 5, 0));
+                new Bonus(27, 0, 25, 23, 9),
+                new Bonus(0, 0, 0, 0, 0));
     }
 
     private Army createArmyAttackers(int lands, int cav, int sword, int knight, int halberd, int spear, int crossbow, int bow) {   // атака

@@ -2,26 +2,24 @@ package wof.warfare;
 
 import wof.warfare.abilities.*;
 
-import java.util.stream.Stream;
-
 public class AttackUtil {
     public static final int DMG_UNIT_LIMIT = 4000;
     public static final int ARMOUR_LIMIT = 75;
 
-    public static double processAttack(Formation source, Formation target, Formation randomTarget, boolean dungeon) {
+    public static double processAttack(Formation source, Formation target, Formation defender, Formation randomTarget, Formation randomTargetDefender, boolean dungeon) {
         double unitAttack = calculateUnitAttack(source, target, dungeon);
         double formationDamage = calculateFormationDamage(source, target, unitAttack, dungeon);
         double targetArmour = Math.min(ARMOUR_LIMIT, calculateTargetArmour(source, target));
-        long damageDealt = calculateDamageDealt(source, target, formationDamage, targetArmour);
-        System.out.println("ATTACK: " + damageDealt + " " + source + " to " + target);
+        long damageDealt = calculateDamageDealt(source, target, defender, formationDamage, targetArmour);
+        //System.out.println("ATTACK: " + damageDealt + " " + source + " to " + target);
         if (source.unit == Troop.BOWMAN && randomTarget != null) {
             for (Ability ability : source.unit.abilities) {
                 if (ability instanceof ZalpAbility) {
                     double dmgPart = ((ZalpAbility) ability).damagePart();
                     double randomTargetDamage = formationDamage * dmgPart;
                     double randomTargetArmour = calculateTargetArmour(source, randomTarget);
-                    long randomDamageDealt = calculateDamageDealt(source, randomTarget, randomTargetDamage, randomTargetArmour);
-                    System.out.println("ATTACK: " + randomDamageDealt + " " + source + " to " + randomTarget);
+                    long randomDamageDealt = calculateDamageDealt(source, randomTarget, randomTargetDefender, randomTargetDamage, randomTargetArmour);
+                    //System.out.println("ATTACK: " + randomDamageDealt + " " + source + " to " + randomTarget);
                 }
             }
         }
@@ -61,18 +59,32 @@ public class AttackUtil {
         return armour;
     }
 
-    private static long calculateDamageDealt(Formation source, Formation target, double formationDamage, double targetArmour) {
+    private static long calculateDamageDealt(Formation source, Formation target, Formation defender, double formationDamage, double targetArmour) {
         double damageDealt = formationDamage * (1 - targetArmour / 100);
         for (Ability ability : target.unit.abilities) {
             if (ability instanceof ReceivedDamageModifier) {
                 damageDealt = ((ReceivedDamageModifier) ability).modifyReceivedDamage(source, target, damageDealt);
             }
         }
+        if (defender != null) {
+            FormationProtector protectorAbility = (FormationProtector) defender.unit.abilities.stream().filter(ability -> ability instanceof FormationProtector).findFirst().orElse(null);
+            double reduction = protectorAbility.getProtection();
+            double partUnitsToBeProtected = findDefendingPart(target, defender);
+            double damageReducedPart = damageDealt * partUnitsToBeProtected;
+            double damageUnreducedPart = damageDealt - damageReducedPart;
+            damageDealt = damageUnreducedPart + damageReducedPart * (1 - reduction);
+        }
         long d = Math.round(damageDealt);
         source.dmgDealt += d;
         target.dmgReceived += d;
 
         return d;
+    }
+
+    private static double findDefendingPart(Formation target, Formation defender) {
+        int defendersQty = Math.min(DMG_UNIT_LIMIT, defender.quantity - defender.perished);
+        int targetQty =  Math.min(DMG_UNIT_LIMIT, target.quantity - target.perished);
+        return 1d * Math.min(defendersQty, targetQty) / targetQty;
     }
 
     public static int calculateLosses(Formation target) {

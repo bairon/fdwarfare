@@ -13,21 +13,23 @@ public class Formation {
 
     public int nextmove;
     public int nextattack;
+    public int totalPerished;
     public int perished;
     public long dmgDealt;
     public long dmgReceived;
     public boolean isMoving;
     public int hpLeft;
+    public int [] wallHp = new int[] {0, 1, 2, 3, 4, 5, 7, 9, 11, 13, 15, 18, 21, 24, 27, 30, 35, 40, 50, 60, 75};
 
 
-    public Formation(boolean attacking, Troop unit, int quantity, Bonus artifact, Bonus skill) {
+    public Formation(boolean attacking, Troop unit, int quantity, Bonus artifact, Bonus skill, int wall, boolean dungeon) {
         this.attacking = attacking;
         this.unit = unit;
         this.quantity = quantity;
         this.attack = unit.attack * (1 + 0.01 * (artifact.attackPercent + skill.attackPercent)) + (unit.melee ? (artifact.attackMelee + skill.attackMelee) : (artifact.attackRanged + skill.attackRanged))
-                        + (unit == Troop.LANDS && attacking ? 80 : 0);
+                        + (unit == Troop.LANDS && attacking && !dungeon ? 80 : 0);
         this.armour = unit.armour * (1 + 0.01 * (artifact.armourPercent + skill.armourPercent)) + artifact.armour + skill.armour;
-        this.hitpoints = unit.hitpoints + (unit == Troop.LANDS && attacking ? 2000 : 0);
+        this.hitpoints = Math.round((unit.hitpoints + (unit == Troop.LANDS && attacking ? 2000 : 0)) * (attacking ? 1 : 1 + .01f * wallHp[wall]));
         this.attckRange = unit.atkrange + (unit == Troop.BOWMAN && !attacking ? 5 : 0);
         this.nextmove = unit.mobility;
         this.nextattack = 0;

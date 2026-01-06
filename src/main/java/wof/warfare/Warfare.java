@@ -8,13 +8,14 @@ public class Warfare {
     public List<Player> defenders;
     public Battlefield battlefield;
     public Town town;
+    public boolean dungeon;
     public List<Round> rounds = new ArrayList<>();
     public int victorious;
     int turns;
 
 
     public void happen() {
-        battlefield = new Battlefield(attackers, defenders, false);
+        battlefield = new Battlefield(attackers, defenders, town.wall, dungeon);
 
         do {
             rounds.add(doRound());

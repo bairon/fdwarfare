@@ -6,6 +6,6 @@ import wof.warfare.abilities.ZalpAbility;
 public class BowmanAbility2 implements Ability, ZalpAbility {
     @Override
     public double damagePart() {
-        return 0.35;
+        return 0.25;
     }
 }

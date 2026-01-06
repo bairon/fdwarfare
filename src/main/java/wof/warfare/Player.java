@@ -12,4 +12,11 @@ public class Player {
         this.artifact = artifact;
         this.skill = skill;
     }
+
+    @Override
+    public String toString() {
+        return "Player{" +
+                "armies=" + armies +
+                '}';
+    }
 }

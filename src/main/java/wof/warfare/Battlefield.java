@@ -1,5 +1,8 @@
 package wof.warfare;
 
+import wof.warfare.abilities.Ability;
+import wof.warfare.abilities.FormationProtector;
+
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -19,7 +22,7 @@ public class Battlefield {
             formations.add(null);
         }
     }
-    public Battlefield(List<Player> attackers, List<Player> defenders, boolean dungeon) {
+    public Battlefield(List<Player> attackers, List<Player> defenders, int wall, boolean dungeon) {
         this.dungeon = dungeon;
         attacker = attackers.get(0); // ToDo
         defender = defenders.get(0); // ToDo
@@ -44,28 +47,28 @@ public class Battlefield {
             }
         int attackingIndex = 0;
         if (bowmanAttck > 0) {
-            formations.set(attackingIndex++, new Formation(true, Troop.BOWMAN, bowmanAttck, attacker.artifact, attacker.skill));
+            formations.set(attackingIndex++, new Formation(true, Troop.BOWMAN, bowmanAttck, attacker.artifact, attacker.skill, wall, dungeon));
         }
         if (crossbowmanAttck > 0) {
-            formations.set(attackingIndex++, new Formation(true, Troop.CROSSBOWMAN, crossbowmanAttck, attacker.artifact, attacker.skill));
+            formations.set(attackingIndex++, new Formation(true, Troop.CROSSBOWMAN, crossbowmanAttck, attacker.artifact, attacker.skill, wall, dungeon));
         }
         if (knightAttck > 0) {
-            formations.set(attackingIndex++, new Formation(true, Troop.KNIGHT, knightAttck, attacker.artifact, attacker.skill));
+            formations.set(attackingIndex++, new Formation(true, Troop.KNIGHT, knightAttck, attacker.artifact, attacker.skill, wall, dungeon));
         }
         if (spearmanAttck > 0) {
-            formations.set(attackingIndex++, new Formation(true, Troop.SPEARMAN, spearmanAttck, attacker.artifact, attacker.skill));
+            formations.set(attackingIndex++, new Formation(true, Troop.SPEARMAN, spearmanAttck, attacker.artifact, attacker.skill, wall, dungeon));
         }
         if (halberdAttck > 0) {
-            formations.set(attackingIndex++, new Formation(true, Troop.HALBERD, halberdAttck, attacker.artifact, attacker.skill));
+            formations.set(attackingIndex++, new Formation(true, Troop.HALBERD, halberdAttck, attacker.artifact, attacker.skill, wall, dungeon));
         }
         if (swordsmanAttck > 0) {
-            formations.set(attackingIndex++, new Formation(true, Troop.SWORDSMAN, swordsmanAttck, attacker.artifact, attacker.skill));
+            formations.set(attackingIndex++, new Formation(true, Troop.SWORDSMAN, swordsmanAttck, attacker.artifact, attacker.skill, wall, dungeon));
         }
         if (landsAttck > 0) {
-            formations.set(attackingIndex++, new Formation(true, Troop.LANDS, landsAttck, attacker.artifact, attacker.skill));
+            formations.set(attackingIndex++, new Formation(true, Troop.LANDS, landsAttck, attacker.artifact, attacker.skill, wall, dungeon));
         }
         if (cavalryAttck > 0) {
-            formations.set(attackingIndex++, new Formation(true, Troop.CAVALRY, cavalryAttck, attacker.artifact, attacker.skill));
+            formations.set(attackingIndex++, new Formation(true, Troop.CAVALRY, cavalryAttck, attacker.artifact, attacker.skill, wall, dungeon));
         }
         formationPrioritized.addAll(formations.subList(0, attackingIndex));
         Collections.reverse(formationPrioritized);
@@ -90,28 +93,28 @@ public class Battlefield {
             }
         int defendingIndex = 29;
         if (bowmanDef > 0) {
-            formations.set(defendingIndex--, new Formation(false, Troop.BOWMAN, bowmanDef, defender.artifact, defender.skill));
+            formations.set(defendingIndex--, new Formation(false, Troop.BOWMAN, bowmanDef, defender.artifact, defender.skill, wall, dungeon));
         }
         if (crossbowmanDef > 0) {
-            formations.set(defendingIndex--, new Formation(false, Troop.CROSSBOWMAN, crossbowmanDef, defender.artifact, defender.skill));
+            formations.set(defendingIndex--, new Formation(false, Troop.CROSSBOWMAN, crossbowmanDef, defender.artifact, defender.skill, wall, dungeon));
         }
         if (knightDef > 0) {
-            formations.set(defendingIndex--, new Formation(false, Troop.KNIGHT, knightDef, defender.artifact, defender.skill));
+            formations.set(defendingIndex--, new Formation(false, Troop.KNIGHT, knightDef, defender.artifact, defender.skill, wall, dungeon));
         }
         if (spearmanDef > 0) {
-            formations.set(defendingIndex--, new Formation(false, Troop.SPEARMAN, spearmanDef, defender.artifact, defender.skill));
+            formations.set(defendingIndex--, new Formation(false, Troop.SPEARMAN, spearmanDef, defender.artifact, defender.skill, wall, dungeon));
         }
         if (halberdDef > 0) {
-            formations.set(defendingIndex--, new Formation(false, Troop.HALBERD, halberdDef, defender.artifact, defender.skill));
+            formations.set(defendingIndex--, new Formation(false, Troop.HALBERD, halberdDef, defender.artifact, defender.skill, wall, dungeon));
         }
         if (swordsmanDef > 0) {
-            formations.set(defendingIndex--, new Formation(false, Troop.SWORDSMAN, swordsmanDef, defender.artifact, defender.skill));
+            formations.set(defendingIndex--, new Formation(false, Troop.SWORDSMAN, swordsmanDef, defender.artifact, defender.skill, wall, dungeon));
         }
         if (landsDef > 0) {
-            formations.set(defendingIndex--, new Formation(false, Troop.LANDS, landsDef, defender.artifact, defender.skill));
+            formations.set(defendingIndex--, new Formation(false, Troop.LANDS, landsDef, defender.artifact, defender.skill, wall, dungeon));
         }
         if (cavalryDef > 0) {
-            formations.set(defendingIndex--, new Formation(false, Troop.CAVALRY, cavalryDef, defender.artifact, defender.skill));
+            formations.set(defendingIndex--, new Formation(false, Troop.CAVALRY, cavalryDef, defender.artifact, defender.skill, wall, dungeon));
         }
 
         formationPrioritized.addAll(formations.subList(defendingIndex + 1, formations.size()));
@@ -129,11 +132,13 @@ public class Battlefield {
             }
             int index = formations.indexOf(formation);
             Formation target = findTarget(formations, formation, index);
+            Formation defender = findDefender(formations, target);
             if (target != null) {
                 formation.nextattack--;
                 if (formation.nextattack <= 0) {
                     Formation randomTarget = formation.unit == Troop.BOWMAN ? findRandomTarget(formations, target) : null;
-                    AttackUtil.processAttack(formation, target, randomTarget, dungeon);
+                    Formation randomTargetDefender = findDefender(formations, randomTarget);
+                    AttackUtil.processAttack(formation, target, defender, randomTarget, randomTargetDefender, dungeon);
                     formation.nextattack = formation.unit.atkspeed;
                 }
                 formation.nextmove = formation.unit.mobility;
@@ -147,11 +152,13 @@ public class Battlefield {
                         formation.nextattack = 0;
                         index = formations.indexOf(formation);
                         target = findTarget(formations, formation, index);
+                        defender = findDefender(formations, target);
                         if (target != null) {
                             formation.nextattack--;
                             if (formation.nextattack <= 0) {
                                 Formation randomTarget = formation.unit == Troop.BOWMAN ? findRandomTarget(formations, target) : null;
-                                AttackUtil.processAttack(formation, target, randomTarget, dungeon);
+                                Formation randomTargetDefender = findDefender(formations, randomTarget);
+                                AttackUtil.processAttack(formation, target, defender, randomTarget, randomTargetDefender, dungeon);
                                 formation.nextattack = formation.unit.atkspeed;
                             }
                             formation.nextmove = formation.unit.mobility;
@@ -176,6 +183,40 @@ public class Battlefield {
                 }
             }
         }
+    }
+
+    private Formation findDefender(ArrayList<Formation> formations, Formation target) {
+        return target == null ? null : findDefender(formations, target, formations.indexOf(target));
+    }
+    private Formation findDefender(ArrayList<Formation> formations, Formation target, int targetIndex) {
+        if (target == null) return null;
+        if (target.attacking) {
+            for (int i = targetIndex - 1; i >= 0; --i) {
+                Formation canBeDefender = formations.get(i);
+                if (canBeDefender != null) {
+                    boolean isProtector = canBeDefender.unit.abilities.stream().anyMatch(ability -> ability instanceof FormationProtector);
+                    if (isProtector) {
+                        return canBeDefender;
+                    } else {
+                        break;
+                    }
+                }
+            }
+        } else {
+            for (int i = targetIndex + 1; i < formations.size(); ++i) {
+                Formation canBeDefender = formations.get(i);
+                if (canBeDefender != null) {
+                    boolean isProtector = canBeDefender.unit.abilities.stream().anyMatch(ability -> ability instanceof FormationProtector);
+                    if (isProtector) {
+                        return canBeDefender;
+                    } else {
+                        break;
+                    }
+                }
+            }
+
+        }
+        return null;
     }
 
     private Formation findRandomTarget(ArrayList<Formation> formations, Formation target) {
@@ -224,6 +265,7 @@ public class Battlefield {
         for (Formation formation : formationPrioritized) {
             //formation.hpLeft = formation.hitpoints;
             formation.quantity -= formation.perished;
+            formation.totalPerished += formation.perished;
             formation.perished = 0;
             formation.nextattack = 0;
             formation.nextmove = formation.unit.mobility;
@@ -292,5 +334,25 @@ public class Battlefield {
         round.attacking = formationPrioritized.stream().filter(f -> f.attacking).map(FormationReport::new).collect(Collectors.toList());
         round.defending = formationPrioritized.stream().filter(f -> !f.attacking).map(FormationReport::new).collect(Collectors.toList());
         return round;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder attackersPerished = new StringBuilder();
+        StringBuilder defendersPerished = new StringBuilder();
+        for (Formation formation : formationPrioritized) {
+
+            if (formation.attacking) {
+                attackersPerished.append(formation.unit.toString()).append(":").append(formation.perished + formation.totalPerished).append("  ");
+            } else {
+                defendersPerished.append(formation.unit.toString()).append(":").append(formation.perished + formation.totalPerished).append("  ");
+            }
+        }
+        return "Battlefield{" +
+                "formations=" + formations +
+                "}\n"
+                + "Attackers Perished: " + attackersPerished + "\n"
+                + "Defenders Perished: " + defendersPerished + "\n"
+                ;
     }
 }

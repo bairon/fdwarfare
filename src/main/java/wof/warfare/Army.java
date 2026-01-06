@@ -17,4 +17,11 @@ public class Army {
         }
         return qty;
     }
+
+    @Override
+    public String toString() {
+        return "Army{" +
+                "troops=" + troops +
+                '}';
+    }
 }
